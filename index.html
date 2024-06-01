@@ -1,21 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+<title> HTML Form</title>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dynamic Forum</title>
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="button.css">
+    <style>
+        .align_vertical_center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        .form_field_margin {
+            margin: 20px;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Forum</h1>
-    <form id="forumForm">
-      <input type="text" id="username" placeholder="Username" required>
-      <textarea id="message" placeholder="Enter your message" required></textarea>
-      <button type="submit">Submit</button>
+<div class="align_vertical_center">
+    <form name="html-form-to-google-sheet">
+        <div class="form_field_margin"><label>Name : <input type="text" name="name" required></label></div>
+        <div class="form_field_margin"><label>Email : <input type="email" name="email" required></label></div>
+        <div class="form_field_margin">
+            <button type="submit" class="ui inverted green button" id="but">Send</button>
+        </div>
+
     </form>
-    <div id="forumPosts"></div>
-  </div>
-  <script src="script.js"></script>
+</div>
+<script src="message.js"></script>
 </body>
 </html>
