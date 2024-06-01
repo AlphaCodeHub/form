@@ -29,23 +29,6 @@
          <button type="submit" id="btnSubmit">Submit</button>
 		 <div id="msg"></div>
       </form>
-	  <script>
-	  jQuery('#frmSubmit').on('submit',function(e){
-		e.preventDefault();
-		jQuery('#msg').html('Please wait...');
-		jQuery('#btnSubmit').attr('disabled',true);
-		jQuery.ajax({
-			url:'https://script.google.com/macros/s/AKfycbwg-J4Y2r7kLHg_cniaS70hzRGuEWtM44JcUqxmglTaESmMiTprYoXfrqJYEpyNI3ylBA/exec',
-			type:'post',
-			data:jQuery('#frmSubmit').serialize(),
-			success:function(result){
-				jQuery('#frmSubmit')[0].reset();
-				jQuery('#msg').html('Thank You');
-				jQuery('#btnSubmit').attr('disabled',false);
-				//window.location.href='';
-			}
-		});
-	  });
-	  </script>
+	  <script src="script.js"></script>
    </body>
 </html>
